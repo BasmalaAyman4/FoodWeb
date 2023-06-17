@@ -35,23 +35,39 @@ export default function Home() {
                 className={`mySwiper ${styles['swiper-style']}`}>
                 <SwiperSlide className={`${styles.swiperHeader}`}>
                     <img src={img1} className={styles.blur} alt="" />
+                    <div className={`${styles['swiperhome__info']}`}>
+                        <div className='container'>
+                            <h2>Dried Fruits & Nuts</h2>
+                            <a className={`${styles.shop}`}>Shop Now</a>
+                            <div className='row '>
+                            </div>
+                        </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide className={`${styles.swiperHeader}`}>
                     <img src={img2} className={styles.blur} alt="" />
+                    <div className={`${styles['swiperhome__info']}`}>
+                        <div className='container'>
+                            <h2>Dried Fruits & Nuts</h2>
+                            <a className={`${styles.shop}`}>Shop Now</a>
+                            <div className='row '>
+                            </div>
+                        </div>
+                    </div>
                 </SwiperSlide>
             </Swiper>
             <Container>
-                <Row>
-                    <Col className='order-xl-1 order-sm-2 order-md-2 order-2' sm="6" >
-                        <Row >
-                            <Col lg="6" md="12" sm="12">
+                <Row className={`${styles.row}`}>
+                    <Col className='order-xxl-1 order-xl-2 order-sm-2 order-md-2 order-2' md="12" lg="6" xl="6" xxl="4" >
+                        <Row className={`${styles.r}`}>
+                            <Col lg="6" md="6" sm="6" >
                                 <div className={`${styles.payment}`}>
                                     <TbTruckDelivery className={`${styles.paymentIcon}`} />
                                     <p className={`${styles.paymentPara}`}>Free Delivery</p>
                                     <p className={`${styles.paymentSec}`}>Worldwide75%</p>
                                 </div>
                             </Col>
-                            <Col lg="6" md="12" sm="12">
+                            <Col lg="6" md="6" sm="6">
                                 <div className={`${styles.payment}`}>
                                     <BiSupport className={`${styles.paymentIcon}`} />
                                     <p className={`${styles.paymentPara}`}>Support</p>
@@ -60,19 +76,19 @@ export default function Home() {
                             </Col>
                         </Row>
                     </Col>
-                    <Col className='order-xl-2 order-sm-1 order-md-1 order-1' sm="12" >
+                    <Col className=' order-xxl-2 order-xl-1 order-sm-1 order-md-1 order-1' md="12" lg="12" xl="12" xxl="4" >
                         <img src={loz} className={`${styles.loz}`} />
                     </Col>
-                    <Col className='order-xl-3 order-sm-3 order-md-3 order-3' sm="6" >
+                    <Col className='order-xxl-3 order-xl-3 order-sm-3 order-md-3 order-3' md="12" lg="6" xl="6" xxl="4"  >
                         <Row >
-                            <Col lg="6" md="12" sm="12">
+                            <Col lg="6" md="6" sm="6">
                                 <div className={`${styles.payment}`}>
                                     <GiReturnArrow className={`${styles.paymentIcon}`} />
                                     <p className={`${styles.paymentPara}`}>Return</p>
                                     <p className={`${styles.paymentSec}`}>24*7 return</p>
                                 </div>
                             </Col>
-                            <Col lg="6" md="12" sm="12">
+                            <Col lg="6" md="6" sm="6">
                                 <div className={`${styles.payment}`}>
                                     <BsCashCoin className={`${styles.paymentIcon}`} />
                                     <p className={`${styles.paymentPara}`}>Payment</p>
