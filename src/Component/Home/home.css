@@ -1,5 +1,9 @@
-.swiper-button-next::after,
-.swiper-button-prev {
+.navbar-toggler-icon{
+    color: #a12246 !important;
+}
+.navbar-toggler{
     background-color: #fff !important;
-    padding: 20px !important;
+}
+.order-1{
+    text-align: center !important;
 }

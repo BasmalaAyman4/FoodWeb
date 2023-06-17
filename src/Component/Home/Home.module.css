@@ -52,8 +52,7 @@
     filter: blur(2px) !important;
     width: 100%;
     min-height: 800px;
-    animation: zoom-in 8s ease-in infinite;
-    -webkit-animation: zoom-in 8s ease-in infinite;
+
 }
 @keyframes zoom-in {
     0% {
@@ -163,7 +162,7 @@
 }
 .payment{
     background-color: #A14226;
-    padding:  40px;
+    padding:  20px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -217,7 +216,9 @@ animation: rotate 50s linear infinite;
     position: relative;
     animation: rotate 50s linear infinite;
         -webkit-animation: rotate 50s linear infinite;
-}
+text-align: center !important;
+
+    }
 .paymentIcon{
     font-size: 30px !important;
 }
@@ -241,7 +242,7 @@ font: 700 50px/60px 'Laila', Helvetica, sans-serif !important;
     position: absolute;
     top: 5%;
     z-index: 1000;
-    left: 15%;
+    left: -10%;
     color: #ffffff;
     font-family: "Changa-SemiBold" !important;
     width: 100%;
@@ -271,4 +272,16 @@ font: 700 50px/60px 'Laila', Helvetica, sans-serif !important;
 }
 .category__para{
     margin-bottom: 20px;
+}
+
+@media (max-width:767px) {
+    .loz{
+        width: 250px;
+        text-align: center !important;
+        margin: -30% auto 0;
+    }
+    
+}
+.swiper__info{
+    text-align: center;
 }

@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Logo from '../../../assets/logo.png'
-import { BsFillCartCheckFill } from "react-icons/bs";
+import { BsFillCartCheckFill, BsSearch } from "react-icons/bs";
 import Modal from 'react-bootstrap/Modal';
 export default function NavbarMenu() {
     const values = [true];
@@ -52,12 +52,11 @@ export default function NavbarMenu() {
     return (
 
         <>
-            {['sm'].map((expand) => (
+            {/*  {['sm'].map((expand) => (
                 <div onScroll={changeNavBg}>
 
-                    <Navbar key={expand} expand={expand} className={navBg ? "navBackground" : "nav"}  >
+                    <Navbar key={expand} expand={expand} bg="dark" className={navBg ? "navBackground" : "nav"}  >
                         <Container className={navBg ? "" : 'dot'} >
-
                             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                             <Navbar.Offcanvas
                                 id={`offcanvasNavbar-expand-${expand}`}
@@ -70,7 +69,7 @@ export default function NavbarMenu() {
                                 </Offcanvas.Header>
                                 <Offcanvas.Body className='f'>
                                     <div> <img alt="" src={Logo} /></div>
-                                    <Nav className="justify-content-start flex-grow-1 p-2">
+                                    <Nav className="justify-content-start flex-grow-1 pe-3">
                                         <Nav.Link href="/" className='px-4 '>HOME</Nav.Link>
                                         <Nav.Link href="/product" className='px-4'>PRODUCT</Nav.Link>
                                         <Nav.Link href="/contact" className='px-4'>CONTACT</Nav.Link>
@@ -80,10 +79,7 @@ export default function NavbarMenu() {
                                 </Offcanvas.Body>
                             </Navbar.Offcanvas>
                             <Navbar.Brand href="#" className='navbrand'>
-                                <label className='switch' >
-                                    <input type='checkbox' onChange={toggleTheme} defaultChecked={selectedTheme === "dark-mode"} />
-                                    <span className='slider'></span>
-                                </label>
+
                                 {values.map((v, idx) => (
                                     <a href='#' key={idx} className="me-2 mb-2" onClick={() => handleShow(v)}>
                                         <BsFillCartCheckFill className='shopCart' />
@@ -108,8 +104,29 @@ export default function NavbarMenu() {
                     </Navbar>
                 </div>
             ))
-            }
+            } */}
+            <div onScroll={changeNavBg}>
+                <Navbar collapseOnSelect expand="lg" className={navBg ? "navBackground" : "nav"} >
+                    <Container className={navBg ? "" : 'dot'} >
+                        <Navbar.Brand href="#home"><img alt="" src={Logo} /></Navbar.Brand>
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        <Navbar.Collapse id="responsive-navbar-nav">
+                            <Nav className='me-auto na' >
+                                <Nav.Link href="#features">Home</Nav.Link>
+                                <Nav.Link href="#pricing">Apricot</Nav.Link>
+                                <Nav.Link href="#features">Contact Us</Nav.Link>
+                                <Nav.Link href="#pricing">Blog</Nav.Link>
+                            </Nav>
+                            <Nav>
+                                <Nav.Link href="#deets"><BsSearch className='shopCart' /></Nav.Link>
+                                <Nav.Link href="#deets"><BsFillCartCheckFill className='shopCart' /></Nav.Link>
+                                <Nav.Link href="#memes">Login</Nav.Link>
+                            </Nav>
 
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
+            </div>
 
         </>
     )

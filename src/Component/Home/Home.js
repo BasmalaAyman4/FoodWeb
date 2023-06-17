@@ -28,7 +28,7 @@ export default function Home() {
                 spaceBetween={50}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 2500,
+                    delay: 3000,
                     disableOnInteraction: false,
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
@@ -42,16 +42,16 @@ export default function Home() {
             </Swiper>
             <Container>
                 <Row>
-                    <Col>
-                        <Row>
-                            <Col>
+                    <Col className='order-xl-1 order-sm-2 order-md-2 order-2' sm="6" >
+                        <Row >
+                            <Col lg="6" md="12" sm="12">
                                 <div className={`${styles.payment}`}>
                                     <TbTruckDelivery className={`${styles.paymentIcon}`} />
                                     <p className={`${styles.paymentPara}`}>Free Delivery</p>
                                     <p className={`${styles.paymentSec}`}>Worldwide75%</p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col lg="6" md="12" sm="12">
                                 <div className={`${styles.payment}`}>
                                     <BiSupport className={`${styles.paymentIcon}`} />
                                     <p className={`${styles.paymentPara}`}>Support</p>
@@ -60,19 +60,19 @@ export default function Home() {
                             </Col>
                         </Row>
                     </Col>
-                    <Col>
+                    <Col className='order-xl-2 order-sm-1 order-md-1 order-1' sm="12" >
                         <img src={loz} className={`${styles.loz}`} />
                     </Col>
-                    <Col>
-                        <Row>
-                            <Col>
+                    <Col className='order-xl-3 order-sm-3 order-md-3 order-3' sm="6" >
+                        <Row >
+                            <Col lg="6" md="12" sm="12">
                                 <div className={`${styles.payment}`}>
                                     <GiReturnArrow className={`${styles.paymentIcon}`} />
                                     <p className={`${styles.paymentPara}`}>Return</p>
                                     <p className={`${styles.paymentSec}`}>24*7 return</p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col lg="6" md="12" sm="12">
                                 <div className={`${styles.payment}`}>
                                     <BsCashCoin className={`${styles.paymentIcon}`} />
                                     <p className={`${styles.paymentPara}`}>Payment</p>
@@ -99,8 +99,36 @@ export default function Home() {
                             delay: 3000,
                             disableOnInteraction: false,
                         }}
+                        breakpoints={{
+                            360: {
+                                // width: 576,
+                                slidesPerView: 1,
+                            },
+                            991: {
+                                // width: 768,
+                                slidesPerView: 1,
+                            },
+                            992: {
+                                // width: 576,
+                                slidesPerView: 2,
+
+                            },
+                            1200: {
+                                // width: 768,
+                                slidesPerView: 2,
+                            },
+                            1434: {
+                                // width: 576,
+                                slidesPerView: 3,
+
+                            },
+                            1700: {
+                                // width: 768,
+                                slidesPerView: 3,
+                            },
+                        }}
                     >
-                        <SwiperSlide>
+                        <SwiperSlide className={`${styles['swiper__info']}`}>
                             <img src={cat1} alt="" />
                             <div className={`${styles['category__info']}`}>
                                 <div className='container'>
@@ -114,7 +142,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        <SwiperSlide className={`${styles['swiper__info']}`}>
                             <img src={cat2} alt="" />
                             <div className={`${styles['category__info']}`}>
                                 <div className='container'>
@@ -128,7 +156,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        <SwiperSlide className={`${styles['swiper__info']}`}>
                             <img src={cat3} alt="" />
                             <div className={`${styles['category__info']}`}>
                                 <div className='container'>
@@ -142,7 +170,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        <SwiperSlide className={`${styles['swiper__info']}`}>
                             <img src={cat4} alt="" />
                             <div className={`${styles['category__info']}`}>
                                 <div className='container'>
@@ -156,7 +184,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        <SwiperSlide className={`${styles['swiper__info']}`}>
                             <img src={cat5} alt="" />
                             <div className={`${styles['category__info']}`}>
                                 <div className='container'>
