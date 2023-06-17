@@ -1,0 +1,5 @@
+.swiper-button-next::after,
+.swiper-button-prev {
+    background-color: #fff !important;
+    padding: 20px !important;
+}
