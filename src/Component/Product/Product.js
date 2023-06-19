@@ -26,13 +26,9 @@ export default function Product() {
                         filterItem={filterItem}
                         menuItems={menuItems}
                     />
-
                     <div className={`${style.allProd}`}>
-
                         <Card ProdItem={product} />
-
                     </div>
-
                 </div>
             </div >
         </>

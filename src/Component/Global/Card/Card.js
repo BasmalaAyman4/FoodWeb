@@ -32,39 +32,37 @@ const Card = ({ ProdItem }) => {
                         infinite={true}
                         arrows={false}
                         dotListClass="custom-dot-list-style">
-                        {ProdItem.map((Val) => {
-                            return (
-                                <Col className={`${style.card}`} lg="4" >
-                                    <div className={`${style.image}`}>
-                                        <div className={`${style.flipCard}`}>
-                                            <div className={`${style.flipCard__inner}`}>
-                                                <div className={`${style.flipCard__front}`}>
-                                                    <img src={Val.img1} alt=""
-                                                    />
-                                                </div>
-                                                <div className={`${style.flipCard__back}`}>
-                                                    <img src={Val.img2} alt="" />
-                                                </div>
+                        {ProdItem && ProdItem.map(Val => (
+                            <Col className={`${style.card}`} lg="4" >
+                                <div className={`${style.image}`}>
+                                    <div className={`${style.flipCard}`}>
+                                        <div className={`${style.flipCard__inner}`}>
+                                            <div className={`${style.flipCard__front}`}>
+                                                <img src={Val.img1} alt=""
+                                                />
                                             </div>
-                                            <div className={`${style.acutionEnded}`}>
-                                                <div >
-                                                    {/*  {((new Date(moment(acutionCard.end_date).format('LL') + " " + acutionCard.end_time).getTime()) - (new Date().getTime())) < 0
+                                            <div className={`${style.flipCard__back}`}>
+                                                <img src={Val.img2} alt="" />
+                                            </div>
+                                        </div>
+                                        <div className={`${style.acutionEnded}`}>
+                                            <div >
+                                                {/*  {((new Date(moment(acutionCard.end_date).format('LL') + " " + acutionCard.end_time).getTime()) - (new Date().getTime())) < 0
                                                     ?
                                                     <p className={`${style.ended}`}> {t("انتهى المزاد")}</p>
                                                     :
                                                     ""
                                                 } */}
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className={`${style.cardBody}`}>
-                                        <h4 className={`${style.card__title}`}>{Val.title}</h4>
-                                        <p className={`${style.card__price}`}>{Val.price}</p>
-                                    </div>
-                                </Col>
-                            );
-                        })}
+                                </div>
+                                <div className={`${style.cardBody}`}>
+                                    <h4 className={`${style.card__title}`}>{Val.title}</h4>
+                                    <p className={`${style.card__price}`}>{Val.price}</p>
+                                </div>
+                            </Col>
+                        ))}
                     </Carousel>
                 </div>
 

@@ -22,6 +22,10 @@ import cat3 from "../../assets/categories-img-03-450x260.jpg"
 import cat4 from "../../assets/categories-img-04-450x260.jpg"
 import cat5 from "../../assets/categories-img-05-450x260.jpg"
 import Product from '../Product/Product';
+import Banner from '../Banner/Banner';
+import SuperFood from '../SuperFood/SuperFood';
+import Testimonial from '../Testimonial/Testimonial';
+import Event from "./../Blog/Blog"
 export default function Home() {
     return (
         <>
@@ -221,6 +225,10 @@ export default function Home() {
                 </div>
             </div>
             <Product />
+            <Banner />
+            <SuperFood />
+            <Testimonial />
+            <Event />
         </>
     )
 }

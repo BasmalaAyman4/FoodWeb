@@ -10,3 +10,10 @@
 .carousel-control-next-icon {
         background-color: transparent !important;}
 
+.swiper-pagination{
+        top: 135px !important;
+}
+.swiper-pagination-bullet {
+        color: #a14226 !important;
+        background-color: #a14226 !important;
+}

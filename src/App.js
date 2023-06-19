@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Component/Global/NavBar/Navbar'
 import Router from './Router/Router';
 import { createContext, useState } from 'react';
+import Footer from "./Component/Global/Footer/Footer"
 export const ThemeContext = createContext(null);
 function App() {
   const [theme, setTheme] = useState("light")
@@ -15,6 +16,7 @@ function App() {
 
         <Navbar />
         <Router />
+        <Footer />
 
 
       </div>
