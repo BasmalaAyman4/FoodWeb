@@ -7,7 +7,7 @@ const Card = ({ ProdItem }) => {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 4,
+            items: 3,
             slidesToSlide: 4 // optional, default to 1.
         },
         tablet: {
@@ -24,7 +24,7 @@ const Card = ({ ProdItem }) => {
     return (
         <>
 
-            <div className={` container-fluid`}>
+            <div className={` container`}>
 
                 <div className="mt-5">
                     <Carousel responsive={responsive}
@@ -33,7 +33,7 @@ const Card = ({ ProdItem }) => {
                         arrows={false}
                         dotListClass="custom-dot-list-style">
                         {ProdItem && ProdItem.map(Val => (
-                            <Col className={`${style.card}`} lg="4" >
+                            <Col className={`${style.card}`}  >
                                 <div className={`${style.image}`}>
                                     <div className={`${style.flipCard}`}>
                                         <div className={`${style.flipCard__inner}`}>

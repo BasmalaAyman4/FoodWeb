@@ -9,14 +9,7 @@ import Logo from '../../../assets/logo.png'
 import { BsFillCartCheckFill, BsSearch } from "react-icons/bs";
 import Modal from 'react-bootstrap/Modal';
 export default function NavbarMenu() {
-    const values = [true];
-    const [fullscreen, setFullscreen] = useState(true);
-    const [show, setShow] = useState(false);
     const [navBg, setNavBg] = useState(false);
-    function handleShow(breakpoint) {
-        setFullscreen(breakpoint);
-        setShow(true);
-    }
     const changeNavBg = () => {
         window.scrollY >= 200 ? setNavBg(true) : setNavBg(false);
     }
@@ -29,103 +22,32 @@ export default function NavbarMenu() {
     }, [])
 
 
-    const setDarkMode = () => {
-        document.querySelector("body").setAttribute("data-theme", "dark-mode");
-        localStorage.setItem("selectedTheme", "dark-mode");
-    }
-    const setLightMode = () => {
-        document.querySelector("body").setAttribute("data-theme", "light-mode");
-        localStorage.setItem("selectedTheme", "light-mode");
-    }
-    const toggleTheme = (e) => {
-        if (e.target.checked) {
-            setDarkMode();
-        }
-        else {
-            setLightMode();
-        }
-    }
-    const selectedTheme = localStorage.getItem("selectedTheme");
-    if (selectedTheme === "dark-mode") {
-        setDarkMode();
-    }
+
     return (
 
         <>
-            {/*  {['sm'].map((expand) => (
-                <div onScroll={changeNavBg}>
-
-                    <Navbar key={expand} expand={expand} bg="dark" className={navBg ? "navBackground" : "nav"}  >
-                        <Container className={navBg ? "" : 'dot'} >
-                            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-                            <Navbar.Offcanvas
-                                id={`offcanvasNavbar-expand-${expand}`}
-                                aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                                placement="start"
-                            >
-                                <Offcanvas.Header >
-                                    <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                                    </Offcanvas.Title>
-                                </Offcanvas.Header>
-                                <Offcanvas.Body className='f'>
-                                    <div> <img alt="" src={Logo} /></div>
-                                    <Nav className="justify-content-start flex-grow-1 pe-3">
-                                        <Nav.Link href="/" className='px-4 '>HOME</Nav.Link>
-                                        <Nav.Link href="/product" className='px-4'>PRODUCT</Nav.Link>
-                                        <Nav.Link href="/contact" className='px-4'>CONTACT</Nav.Link>
-                                        <Nav.Link href="/aboutUs" className='px-4'>ABOUT</Nav.Link>
-                                    </Nav>
-
-                                </Offcanvas.Body>
-                            </Navbar.Offcanvas>
-                            <Navbar.Brand href="#" className='navbrand'>
-
-                                {values.map((v, idx) => (
-                                    <a href='#' key={idx} className="me-2 mb-2" onClick={() => handleShow(v)}>
-                                        <BsFillCartCheckFill className='shopCart' />
-                                        {typeof v === 'string' && `below ${v.split('-')[0]}`}
-                                    </a>
-                                ))}
-                                <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-                                    <Modal.Header closeButton />
-                                    <Modal.Body>
-                                        <a href='/shop-cart' className='shop-cart__link'>SHOPPING CART</a>
-
-                                        <div className='subTotal'>
-                                            <p>Subtotal</p>
-                                            <p>840 AED</p>
-                                        </div>
-                                        <a href='#' className='check-out__link'> PROCEED TO CHECKOUT</a>
-                                    </Modal.Body>
-                                </Modal>
-                                <a href="/login" className='px-4 login' >LOGIN</a>
-                            </Navbar.Brand>
-                        </Container>
-                    </Navbar>
-                </div>
-            ))
-            } */}
             <div onScroll={changeNavBg}>
                 <Navbar collapseOnSelect expand="lg" className={navBg ? "navBackground" : "nav"} >
                     <Container className={navBg ? "" : 'dot'} >
                         <Navbar.Brand href="#home"><img alt="" src={Logo} /></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                        <Navbar.Collapse id="responsive-navbar-nav">
+                        <Navbar.Collapse id="responsive-navbar-nav" className="coll">
                             <Nav className='me-auto na' >
-                                <Nav.Link href="#features">Home</Nav.Link>
-                                <Nav.Link href="#pricing">Apricot</Nav.Link>
-                                <Nav.Link href="#features">Contact Us</Nav.Link>
-                                <Nav.Link href="#pricing">Blog</Nav.Link>
+                                <Nav.Link href="/" className='me-5'>Home</Nav.Link>
+                                <Nav.Link href="/apricot" className='me-5'>Apricot</Nav.Link>
+                                <Nav.Link href="/contact" className='me-5'>Contact-Us</Nav.Link>
+                                <Nav.Link href="/blog" className='me-5'>Blog</Nav.Link>
                             </Nav>
                             <Nav>
                                 <Nav.Link href="#deets"><BsSearch className='shopCart' /></Nav.Link>
                                 <Nav.Link href="#deets"><BsFillCartCheckFill className='shopCart' /></Nav.Link>
-                                <Nav.Link href="#memes">Login</Nav.Link>
+                                <Nav.Link href="/login" >Login</Nav.Link>
                             </Nav>
 
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
+
             </div>
 
         </>

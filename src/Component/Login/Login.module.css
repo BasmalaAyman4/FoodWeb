@@ -1,0 +1,7 @@
+.login{
+    display: flex;
+    justify-content: space-between;
+}
+.color{
+    background-color: #f5f5f5 !important;
+}

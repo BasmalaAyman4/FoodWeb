@@ -1,26 +1,16 @@
 
 import './App.css';
 import Navbar from './Component/Global/NavBar/Navbar'
-import Router from './Router/Router';
-import { createContext, useState } from 'react';
 import Footer from "./Component/Global/Footer/Footer"
-export const ThemeContext = createContext(null);
+import Router from './Router/Router';
 function App() {
-  const [theme, setTheme] = useState("light")
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark-mode" : "light"));
-  };
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App " id={theme}>
-
-        <Navbar />
-        <Router />
-        <Footer />
-
-
-      </div>
-    </ThemeContext.Provider>
+    <div className="App ">
+      <Navbar />
+      <Router />
+      <Footer />
+    </div>
   );
 }
 

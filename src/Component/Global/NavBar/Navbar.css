@@ -4,30 +4,36 @@ border-bottom: 5px dashed #d6d6d6;
 padding-bottom: 15px;
 }
 .nav{
+    
+        top: 0;
     position: fixed !important;
+    overflow: hidden;
     width: 100%;
     background-color: transparent;
     color: var(--text-color);
-    z-index: 999;
+    z-index: 9;
     letter-spacing: 2px;
     font-family: RobotoBlack;
    
 }
-.f{
-display: flex !important;
-    justify-content: space-around !important;
-    align-items: center !important;
-    gap: 10%;
-}
+
 .navBackground{
+            top: 0;
     position: fixed !important;
+    overflow: hidden;
         width: 100%;
         background-color: #111111;
         color: var(--text-color);
-        z-index: 999;
+        z-index: 9;
         letter-spacing: 2px;
         border-bottom: 0.5px solid #d6d6d6;
             box-shadow: 2px 0 12px 0 rgb(0 0 0 / 15%);
+} 
+.f {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    gap: 10%;
 }
 .nav-link{
     color: #fff !important;
@@ -35,66 +41,8 @@ display: flex !important;
     font-size: 17px !important;
 font-weight: bold !important;
 }
-/* The switch - the box around the slider */
-.switch {
-    --width-of-switch: 3em;
-    --height-of-switch: 1.5em;
-    /* size of sliding icon -- sun and moon */
-    --size-of-icon: 1.4em;
-    /* it is like a inline-padding of switch */
-    --slider-offset: 0.3em;
-    position: relative;
-    width: var(--width-of-switch);
-    height: var(--height-of-switch);
-}
 
-/* Hide default HTML checkbox */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
 
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f4f4f5;
-    transition: .4s;
-    border-radius: 30px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: var(--size-of-icon, 1.4em);
-    width: var(--size-of-icon, 1.4em);
-    border-radius: 20px;
-    left: var(--slider-offset, 0.3em);
-    top: 50%;
-    transform: translateY(-50%);
-    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
-    transition: .4s;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-input:checked+.slider {
-    background-color: #303136;
-}
-
-input:checked+.slider:before {
-    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
-    background: #303136;
-    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
-    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-}
 .logo{
     display: flex;
 }
@@ -197,6 +145,13 @@ margin-left: 20px;
 .btn-close{
     color: var(--main-background-color) !important;
 }
-.na{
-    margin-left: 20%;
+
+.coll{
+    background-color: #111111;
+}
+@media (min-width:992px) {
+    .coll{
+        background-color: transparent;
+    }
+    
 }
