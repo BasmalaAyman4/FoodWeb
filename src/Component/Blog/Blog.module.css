@@ -19,7 +19,7 @@
 }
 .card {
   position: relative;
-  width: 500px;
+  max-width: 500px;
   height: 550px;
   margin: 20px;
   border-radius: 10px;
@@ -39,7 +39,7 @@
 }
 
 .card__image img {
-  width: 500px !important;
+  max-width: 500px !important;
   height: 550px !important;
   object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -49,7 +49,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   padding: 20px;
   background-color: #fff;
   transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -106,14 +106,4 @@
   display: flex;
   gap:6%;
   position: relative;
-}
-.blog__body::after{
-  content: "";
-  position: absolute;
-  height: 40px;
-  width: 2px;
-  background-color: #a12246;
-left: 25%;
-top: -5px;
-  
 }

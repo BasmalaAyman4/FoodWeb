@@ -3,9 +3,7 @@
    max-width: 100%;
 transition: all 400ms ease-in-out;
 }
-.banner{
-    margin: 50px;
-}
+
 .banner__img:hover{
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
@@ -20,7 +18,7 @@ transition: all 400ms ease-in-out;
 .category__info {
     position: absolute;
     top: 5%;
-    z-index: 1000;
+    z-index: 10;
     left: 10%;
     color: #ffffff;
     font-family: "Changa-SemiBold" !important;
@@ -61,3 +59,4 @@ transition: all 400ms ease-in-out;
     background-color: #fff;
     color: #A14226;
 }
+

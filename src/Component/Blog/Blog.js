@@ -16,7 +16,7 @@ export default function Blog() {
                     <img alt="" src={img} className={`${style.blog__img}`} />
                 </div>
                 <Row>
-                    <Col>
+                    <Col md="6">
                         <div className={`${style.card}`}>
                             <div className={`${style.card__image}`}>
                                 <img alt="" src={img1} />
@@ -36,7 +36,7 @@ export default function Blog() {
                             </div>
                         </div>
                     </Col>
-                    <Col>
+                    <Col md="6">
                         <div className={`${style.card}`}>
                             <div className={`${style.card__image}`}>
                                 <img alt="" src={img2} />

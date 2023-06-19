@@ -8,7 +8,7 @@ export default function Banner() {
         <>
             <Container>
                 <Row className={`${style.banner}`}>
-                    <Col md="6">
+                    <Col md="6" sm="12" className={`${style.bannerFood} mb-3`}>
                         <div className={`${style.banner__body}`}>
                             <img alt="" src={banner1} className={`${style.banner__img} img-fluid`} />
                             <div className={`${style['category__info']}`}>
@@ -22,7 +22,7 @@ export default function Banner() {
                             </div>
                         </div>
                     </Col>
-                    <Col md="6">
+                    <Col md="6" sm="12" className={`${style.bannerFood} mb-3`}>
                         <div className={`${style.banner__body}`}>
                             <img alt="" src={banner2} className={`${style.banner__img} img-fluid`} />
                             <div className={`${style['category__info']}`}>
