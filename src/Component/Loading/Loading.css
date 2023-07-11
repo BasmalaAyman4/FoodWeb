@@ -29,7 +29,7 @@
 }
 .admin::after{
 position: absolute;
-content: "handmad rugs";
+content: "handmadrugs";
 font-family: 'Poppins-Light';
 top: 63px;
 right: 75px;
@@ -38,4 +38,11 @@ background-color: #fff;
 letter-spacing: 5px;
 font-weight: bold;
 padding: 5px;
+}
+@media (min-width:767px) {
+.admin::after{
+font-size: 7px;
+top: 58px;
+    right: 77px;
+}
 }
