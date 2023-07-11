@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
 import styles from './Home.module.css'
-import { Autoplay, Pagination, Navigation, EffectFade } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import img1 from "../../assets/slider-01-1920x960.jpg"
-import img2 from "../../assets/slider-02-1920x960.jpg"
 import "swiper/css";
 import "./home.css"
 import { Button, Col, Container, Row } from 'react-bootstrap';
@@ -14,8 +10,6 @@ import Product from '../Product/Product';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
-import { useSpring, animated, config } from 'react-spring';
-import styled from "styled-components";
 import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import { Tb360View } from "react-icons/tb";
 import { Link } from 'react-router-dom';
@@ -56,7 +50,6 @@ const Home = ({ productItems, handleAddProduct }) => {
             <Container>
                 <Row className={`${styles.gallery}`}>
                     <Col>
-
                         <ImageGallery
                             items={images}
                             thumbnailPosition={'left'}
