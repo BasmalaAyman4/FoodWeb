@@ -2,7 +2,6 @@
         font-family: RobotoBlack;
 }
 
-
 .carousel-indicators{
         display: none !important;
 }
@@ -14,6 +13,11 @@
         top: 135px !important;
 }
 .swiper-pagination-bullet {
-        color: #a14226 !important;
-        background-color: #a14226 !important;
+        color: var(--secondary-color) !important;
+        background-color: var(--secondary-color) !important;
 }
+/* .form-control:focus {
+box-shadow: 0 0 0 0.10rem rgba(216, 99, 70, 0.61) !important;
+border: #a14226 1px solid !important;
+}
+ */

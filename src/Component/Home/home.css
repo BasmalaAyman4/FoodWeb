@@ -12,3 +12,15 @@
         margin-top: 20%;
     }
 }
+.breadcrumb-item {
+    color: #bebbbb !important;
+    font-family: 'Poppins-Light' !important;
+}
+.breadcrumb-item a {
+    color: #fff !important;
+    text-decoration: none;
+    font-family: 'Poppins-Light' !important;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    color: #fff !important;
+}

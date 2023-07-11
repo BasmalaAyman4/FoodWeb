@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-import img from "../../../assets/logo.png"
+import img from "../../../assets/logo-removebg-preview.png"
 import "./Footer.css"
 export default function Footer() {
     return (
@@ -12,11 +12,11 @@ export default function Footer() {
 
                 <section className=''>
                     <MDBContainer className='text-center text-md-start mt-5'>
-                        <MDBRow className='mt-3'>
+                        <MDBRow className='mt-3 footColor'>
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
                                     <MDBIcon icon="gem" className="me-3" />
-                                    <img alt="" src={img} />
+                                    <img alt="" src={img} className='w-100' />
                                 </h6>
                                 <p>
                                     Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
@@ -94,9 +94,9 @@ export default function Footer() {
                 </section>
 
                 <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-                    © 2021 Copyright:
+                    © 2023 Copyright:
                     <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-                        FoodWeb
+                        E-commerce web
                     </a>
                 </div>
             </MDBFooter>

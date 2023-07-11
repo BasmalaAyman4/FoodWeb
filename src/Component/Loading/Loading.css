@@ -1,0 +1,41 @@
+.loading-spinner{
+     width: 350px;
+     height: 10px;
+     margin-top: 30px;
+     border-radius:50px ;
+     -webkit-border-radius:50px ;
+     -moz-border-radius:50px ;
+     -ms-border-radius:50px ;
+     -o-border-radius:50px ;
+}
+
+.spinner-container,
+.rugs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.rugs{
+    margin-top: 20%;
+}
+.admin{
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-family: 'Poppins-Medium';
+    position: relative;
+}
+.admin::after{
+position: absolute;
+content: "handmad rugs";
+font-family: 'Poppins-Light';
+top: 63px;
+right: 75px;
+font-size: 12px;
+background-color: #fff;
+letter-spacing: 5px;
+font-weight: bold;
+padding: 5px;
+}
